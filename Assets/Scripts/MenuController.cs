@@ -63,9 +63,9 @@ public class MenuIntro : MonoBehaviour {
         Vector3 bgTargetScale = originalBgScale * 1.2f;
 
         while (true) {
-            // Zoom in for 6 seconds
+            // Zoom in for 20 seconds
             float t = 0;
-            while (t < 6f) {
+            while (t < 20f) {
                 t += Time.deltaTime;
                 titleLogo.transform.localScale = Vector3.Lerp(originalLogoScale, logoTargetScale, t / 6f);
                 if (background != null) {
@@ -74,9 +74,9 @@ public class MenuIntro : MonoBehaviour {
                 yield return null;
             }
 
-            // Go back in 5 seconds
+            // Go back in 15 seconds
             t = 0;
-            while (t < 5f) {
+            while (t < 15f) {
                 t += Time.deltaTime;
                 titleLogo.transform.localScale = Vector3.Lerp(logoTargetScale, originalLogoScale, t / 5f);
                 if (background != null) {
