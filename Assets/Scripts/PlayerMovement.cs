@@ -34,6 +34,9 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        // ---> PAUSE FIX: Agar game pause hai toh aage ka koi movement/rotation code nahi chalega <---
+        if (Time.timeScale == 0f) return;
+
         // 0. Mouse Look Logic
         if (playerCamera != null)
         {
